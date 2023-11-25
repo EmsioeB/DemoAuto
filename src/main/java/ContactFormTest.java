@@ -53,7 +53,7 @@ public class ContactFormTest {
         // Mở trang web
         driver.get(baseURL);
 
-        // Nhấp vào logo fanpage để chắc chắn rằng đã truy cập được vào trang chủ
+        // Xác minh đã vào trang chủ thông qua Text ở trang chủ
         Assert.assertEquals(driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/div/div/ul/li[1]/div/div[1]/h1")).getText(), "Nhà tư vấn chiến lược số\n" +
                 "hàng đầu Việt Nam");
     }
