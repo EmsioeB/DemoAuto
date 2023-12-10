@@ -118,16 +118,6 @@ public class ContactFormTest {
             // Không có thông báo lỗi về việc thiếu trường bắt buộc, kiểm tra các trường hợp khác nếu cần
         }
     }
-    @AfterMethod
-    public void takeScreenshotOnFailure(ITestResult result) {
-        // Kiểm tra nếu test case thất bại thì chụp ảnh màn hình
-        if (result.getStatus() == ITestResult.FAILURE) {
-                File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-                File destination = new File("path/to/screenshots/" + result.getName() + ".png");
-        }
-        // path/to/screenshots/: Đường dẫn thư mục lưu ảnh chụp màn hình
-    }
-
     @AfterClass
     public static void tearDown() throws InterruptedException {
         // Đóng trình duyệt sau khi test
